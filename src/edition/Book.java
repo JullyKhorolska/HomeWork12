@@ -1,24 +1,18 @@
 package edition;
-
-import printable.Printable;
-import java.util.*;
-
-public class Book implements Printable {
+public class Book {
     public String title;
     public Book(String title){
         this.title = title;
     }
-    @Override
-    public String print() {
-        return ("The title of this book is " + this.title);
+
+    public String getTitle(){
+        return title;
     }
     @Override
     public String toString(){
        return ("This is book: " + this.title);
     }
+    public void print(){
+        System.out.println("This is book!");
+    }
 }
-//        for(Printable edition : printable){
-//            if(edition instanceof Book){
-//                System.out.println(((Book) edition).title);
-//            }
-//        }

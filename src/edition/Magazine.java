@@ -1,22 +1,24 @@
 package edition;
-import printable.Printable;
 
-import java.util.List;
-
-public class Magazine implements Printable {
+public class Magazine {
     public String title;
-    public Magazine(String title){
+
+    public Magazine(String title) {
         this.title = title;
     }
-    @Override
-    public String print() {
-        return ("The title of this magazine is " + this.title);
-    }
 
+    public String getTitle() {
+        return this.title;
+    }
+    public void print(){
+        System.out.println("This is Magazine!");
+    }
     @Override
-    public String toString(){
+
+    public String toString() {
         return ("This is magazine: " + this.title);
     }
 
 }
+
 
